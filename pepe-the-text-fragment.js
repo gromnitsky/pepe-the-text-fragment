@@ -1,6 +1,7 @@
-export default function(z_index = 999) {
-    let url = performance.getEntries().find( v => v.type === 'navigate')?.name || location.href;
-    /#.*:~:text=/.test(url) && draw(z_index)
+export default (z_index = 999) => has_text_fragment() && draw(z_index)
+
+function has_text_fragment() {
+    return /#.*:~:text=/.test(performance.getEntries().find( v => v.type === 'navigate')?.name || location.href)
 }
 
 function draw(z_index) {
