@@ -10,4 +10,5 @@ function draw(z_index) {
     w.innerHTML = '<img src="data:image/gif;base64,R0lGODlhFAAQAOMKAAAAAFp3N3RhMVplU41VL1iNPnyQbKGumMLHuv////b27/b27/b27/b27/b27/b27yH5BAEKAA8ALAAAAAAUABAAAARl8MmJjEUSHTz7O0UYGmJxeFmpiuhDrqrBSSAMc7U6GId1DIPDCRFLHAADTQKBTH5gwEFgZAicHjbbNZctGSSvruoUDgUIaEFgzQ4MniUBek5HX8sFtmAvt3e4NgEzFBo9FocbHhEAOw==">'
     w.querySelector('img').style.cssText = 'image-rendering:pixelated;max-height:100%;max-width:100%;height:500px;width:auto'
     d.body.appendChild(w)
+    return w
 }

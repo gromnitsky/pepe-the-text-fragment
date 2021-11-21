@@ -3,11 +3,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script>
-  import('./pepe-the-text-fragment.js').then( m => m.default())
-</script>
+<h1>Text Fragment Test</h1>
 
-<h1>Nullam eu ante vel est convallis dignissim.</h1>
+<p>Browser support: <b id="support"></b></p>
+
+<p style="display: flex; justify-content: space-between">
+  <a target="_blank" href="#:~:text=Pellentesque%20dapibus">Test again</a>
+  <a href="https://github.com/gromnitsky/pepe-the-text-fragment">Github</a>
+</p>
+
+<section id="help">
+  <p>
+    When you scroll or click anywhere on a document, internally, a
+    text snippet in the url disappears. This is done by the browser,
+    you have no control over this behaviour.
+  </p>
+
+  <p>
+    If you reload the page, <i>Pepe the Text Fragment</i> disappears
+    too.
+  </p>
+</section>
+
+<hr>
 
 <p>
   Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.
@@ -214,3 +232,15 @@
   nulla lacinia eros.  Sed id ligula quis est convallis tempor.
   Curabitur lacinia pulvinar nibh.  Nam a sapien.
 </p>
+
+<script type="module">
+  import pepe from './pepe-the-text-fragment.js'
+
+  let w = pepe()
+  w && (w.onclick = () => w.remove())
+
+  let tf = document.fragmentDirective
+  document.querySelector('#support').innerText = !!tf
+  if (!tf) document.querySelector('#help').style.display = 'none'
+</script>
+
