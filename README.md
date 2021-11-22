@@ -32,7 +32,7 @@ The module is veri smol:
 
 ```
 $ terser pepe-the-text-fragment.js --module -mc | gzip -c | wc -c
-602
+626
 ```
 
 ## Usage
