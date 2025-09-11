@@ -3,8 +3,6 @@
 A solution for all site owners, who don't like 'Copy link to
 highlight' feature.
 
-[Check](http://gromnitsky.users.sourceforge.net/js/examples/pepe-the-text-fragment/#:~:text=Pellentesque%20dapibus)
-
 ## What?
 
 There's a spec called [Text Fragments][]. If *a user agent* supports
@@ -45,6 +43,10 @@ pepe()
 The function displays a modal frog & returns an injected dom node,
 hence you can bind an `onclick` event to it, for example. See
 `index.html`.
+
+## Bugs
+
+Works only in Chrome.
 
 ## Loicense
 
